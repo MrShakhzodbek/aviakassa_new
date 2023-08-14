@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@syncfusion/ej2-vue-calendars": "^22.2.8",
+    "axios": "^1.4.0",
+    "json-server": "^0.17.3",
     "vue": "^3.3.4",
     "vue-datepicker-ui": "^3.1.1",
     "vue-flag-icon": "^2.1.0",

@@ -4,7 +4,14 @@
       <div class="row">
         <div class="col-12">
           <form>
-            <input type="text" placeholder="City, Country or Hotel" />
+              <select name="select-category"  v-model="selectVal" @change="filterHotel" style="background: #EEECEC; border: none; outline: none;  display: flex; ">
+                  <option style="color: black;"  value="all">City, Country or Hotel</option>
+                  <option style="color: black;" value="London">London,Great Britain</option>
+                  <option style="color: black;" value="Tashkent">Tashkent,Uzbekistan</option>
+                  <option style="color: black;" value="Moscow">Moscow,Russia</option>
+                  <option style="color: black;" value="Nyu-York">Nyu-York,USA</option>
+                  <option style="color: black;" value="Berlin">Berlin,Berlin</option>
+              </select>
             <input type="date" placeholder="Заезд" />
             <input type="date" placeholder="Отъезд" />
             <div class="buttons">
@@ -15,7 +22,7 @@
                 <button @click="people(1)">+</button>
               </div>
             </div>
-            <button class="search">Search Hotel</button>
+            <button class="search" @click="searchHotel">Search Hotel</button>
           </form>
         </div>
       </div>
@@ -64,10 +71,11 @@
                         </div>
                     </div>
                     <div class="main_hotel">
-                        <div class="hotel">
-                            <img src="../assets/Daniel_Hill_1.jpg.crdownload" alt="hotel">
+<!--                        <pre>{{hotel}}</pre>-->
+                        <div class="hotel" v-for="item in hotel" :key="item">
+                            <img :src="item?.image" alt="hotel">
                             <div class="information_hotel">
-                                <h4>Daniel Hill</h4>
+                                <h4>{{ item?.title }}</h4>
                                 <div class="icons">
                                     <i class="fa-solid fa-wifi"></i>
                                     <i class="fa-solid fa-utensils"></i>
@@ -76,67 +84,7 @@
                                     <i class="fa-solid fa-champagne-glasses"></i>
                                     <i class="fa-solid fa-bed"></i>
                                 </div>
-                                <button>from 13 433 RUB</button>
-                            </div>
-                        </div>
-                        <div class="hotel">
-                            <img src="../assets/Daniel_Hill_1.jpg.crdownload" alt="hotel">
-                            <div class="information_hotel">
-                                <h4>Daniel Hill</h4>
-                                <div class="icons">
-                                    <i class="fa-solid fa-wifi"></i>
-                                    <i class="fa-solid fa-utensils"></i>
-                                    <i class="fa-solid fa-square-parking"></i>
-                                    <i class="fa-solid fa-person-swimming"></i>
-                                    <i class="fa-solid fa-champagne-glasses"></i>
-                                    <i class="fa-solid fa-bed"></i>
-                                </div>
-                                <button>from 13 433 RUB</button>
-                            </div>
-                        </div>
-                        <div class="hotel">
-                            <img src="../assets/Daniel_Hill_1.jpg.crdownload" alt="hotel">
-                            <div class="information_hotel">
-                                <h4>Daniel Hill</h4>
-                                <div class="icons">
-                                    <i class="fa-solid fa-wifi"></i>
-                                    <i class="fa-solid fa-utensils"></i>
-                                    <i class="fa-solid fa-square-parking"></i>
-                                    <i class="fa-solid fa-person-swimming"></i>
-                                    <i class="fa-solid fa-champagne-glasses"></i>
-                                    <i class="fa-solid fa-bed"></i>
-                                </div>
-                                <button>from 13 433 RUB</button>
-                            </div>
-                        </div>
-                        <div class="hotel">
-                            <img src="../assets/Daniel_Hill_1.jpg.crdownload" alt="hotel">
-                            <div class="information_hotel">
-                                <h4>Daniel Hill</h4>
-                                <div class="icons">
-                                    <i class="fa-solid fa-wifi"></i>
-                                    <i class="fa-solid fa-utensils"></i>
-                                    <i class="fa-solid fa-square-parking"></i>
-                                    <i class="fa-solid fa-person-swimming"></i>
-                                    <i class="fa-solid fa-champagne-glasses"></i>
-                                    <i class="fa-solid fa-bed"></i>
-                                </div>
-                                <button>from 13 433 RUB</button>
-                            </div>
-                        </div>
-                        <div class="hotel">
-                            <img src="../assets/Daniel_Hill_1.jpg.crdownload" alt="hotel">
-                            <div class="information_hotel">
-                                <h4>Daniel Hill</h4>
-                                <div class="icons">
-                                    <i class="fa-solid fa-wifi"></i>
-                                    <i class="fa-solid fa-utensils"></i>
-                                    <i class="fa-solid fa-square-parking"></i>
-                                    <i class="fa-solid fa-person-swimming"></i>
-                                    <i class="fa-solid fa-champagne-glasses"></i>
-                                    <i class="fa-solid fa-bed"></i>
-                                </div>
-                                <button>from 13 433 RUB</button>
+                                <button>from {{ item?.price }} RUB</button>
                             </div>
                         </div>
                     </div>
@@ -158,20 +106,40 @@
   </div>
 </template>
 
-<script>
-export default {
-  data: () => {
-    return {
-      count: 0,
-    };
-  },
-  methods: {
-    people(val) {
-      if (val == -1 && this.count == 0) return false;
-      this.count += val;
-    },
-  },
-};
+<script setup>
+import {onMounted, ref} from "vue";
+import axios from "../plugins/axios.js";
+
+const selectVal = ref("all")
+
+const count = ref(0)
+const hotel = ref([])
+
+function people(val){
+    if (val == -1 && count.value == 0) return false;
+    count.value += val;
+}
+
+function filterHotel(){
+    console.log(selectVal.value)
+}
+
+function searchHotel(e){
+    e.preventDefault()
+    if(selectVal.value !== 'all'){
+      hotel.value = hotel.value.filter((el)=> el.city === selectVal.value)
+    }
+    console.log("run")
+}
+
+onMounted(()=>{
+    axios.get('hotel').then((res)=>{
+        console.log(res,"res")
+        hotel.value = res.data
+    })
+})
+
+
 </script>
 
 <style scoped>
@@ -334,5 +302,9 @@ export default {
 .lists .map .map_main{
     height: 100%;
 
+}
+
+.select-category{
+    background: red;
 }
 </style>

@@ -128,8 +128,18 @@
   </main>
 </template>
 
-<script>
-export default {};
+<script setup>
+
+import {onMounted} from "vue";
+import axios from "../plugins/axios.js";
+
+
+
+onMounted(()=>{
+  axios.get('tickets').then((res)=>{
+      console.log(res,"home")
+  })
+})
 </script>
 
 <style  scoped>
