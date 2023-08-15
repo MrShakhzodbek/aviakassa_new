@@ -1,28 +1,29 @@
 <template>
-  <div class="ruyxat">
+  <div class="hotels">
+    <div class="ruyxat">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <form>
               <select name="select-category"  v-model="selectVal" @change="filterHotel" style="background: #EEECEC; border: none; outline: none;  display: flex; ">
-                  <option style="color: black;"  value="all">City, Country or Hotel</option>
+                  <option style="color: black;"  value="all">{{ $t('hotel.search_city') }}</option>
                   <option style="color: black;" value="London">London,Great Britain</option>
                   <option style="color: black;" value="Tashkent">Tashkent,Uzbekistan</option>
                   <option style="color: black;" value="Moscow">Moscow,Russia</option>
                   <option style="color: black;" value="Nyu-York">Nyu-York,USA</option>
                   <option style="color: black;" value="Berlin">Berlin,Berlin</option>
               </select>
-            <input type="date" placeholder="Заезд" />
-            <input type="date" placeholder="Отъезд" />
+            <input type="date" :placeholder="$t('hotel.from')" />
+            <input type="date" :placeholder="$t('hotel.to')" />
             <div class="buttons">
-              <p class="text">Number of people</p>
+              <p class="text">{{ $t('hotel.p') }}</p>
               <div class="btns">
                 <button @click="people(-1)">-</button>
                 {{ count }}
                 <button @click="people(1)">+</button>
               </div>
             </div>
-            <button class="search" @click="searchHotel">Search Hotel</button>
+            <button class="search" @click="searchHotel">{{ $t('hotel.btn') }}</button>
           </form>
         </div>
       </div>
@@ -35,17 +36,17 @@
                 <div class="information">
                     <div class="info_hotel">
                         <div class="sort">
-                            <label for="">Sort by</label> <br>
+                            <label for="">{{ $t('hotel.label') }}</label> <br>
                             <select>
-                                <option selected>No Selected</option>
-                                <option value="popularity">By popularity</option>
-                                <option value="cheaper">Cheap first</option>
-                                <option value="expensive">Expensive first</option>
+                                <option selected>{{ $t('hotel.option_first') }}</option>
+                                <option value="popularity">{{ $t('hotel.option_second') }}</option>
+                                <option value="cheaper">{{ $t('hotel.option_second') }}</option>
+                                <option value="expensive">{{ $t('hotel.option_fourth') }}</option>
                             </select>
                         </div>
                         <hr>
                         <div class="number_stars">
-                            <label for="">Number of stars</label><br>
+                            <label for="">{{ $t('hotel.secondd_label') }}</label><br>
                             <input type="checkbox"><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                             <br>
                             <input type="checkbox"><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
@@ -58,16 +59,16 @@
                         </div>
                         <hr>
                         <div class="service">
-                            <label for="">Services and facilities</label> <br>
-                            <input type="checkbox">Parking <br>
-                            <input type="checkbox">Free Internet <br>
-                            <input type="checkbox">Bar / Restaurant <br>
-                            <input type="checkbox">Breakfast <br>
-                            <input type="checkbox">Pool <br>
-                            <input type="checkbox">In-room bathroom <br>
-                            <input type="checkbox">Fitness <br>
-                            <input type="checkbox">Spa-Services <br>
-                            <input type="checkbox">Transfer <br>
+                            <label for="">{{ $t('hotel.third_label') }}</label> <br>
+                            <input type="checkbox">{{ $t('hotel.parking') }} <br>
+                            <input type="checkbox">{{ $t('hotel.free') }} <br>
+                            <input type="checkbox">{{ $t('hotel.bar') }} <br>
+                            <input type="checkbox">{{ $t('hotel.breakfast') }} <br>
+                            <input type="checkbox">{{ $t('hotel.pool') }} <br>
+                            <input type="checkbox">{{ $t('hotel.bathroom') }} <br>
+                            <input type="checkbox">{{ $t('hotel.fitness') }} <br>
+                            <input type="checkbox">{{$t('hotel.spa')}} <br>
+                            <input type="checkbox">{{ $t('hotel.transfer') }} <br>
                         </div>
                     </div>
                     <div class="main_hotel">
@@ -91,7 +92,7 @@
                 </div>
                 <div class="map">
                     <div class="search_hotel">
-                        <label for="">Search by hotels</label>
+                        <label for="">{{ $t('hotel.search_by_hotel') }}</label>
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text">
                         <i class="fa-solid fa-xmark"></i>
@@ -103,6 +104,7 @@
             </div>
         </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -143,8 +145,10 @@ onMounted(()=>{
 </script>
 
 <style scoped>
+.hotels{
+  background: url('https://images.pexels.com/photos/2245411/pexels-photo-2245411.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center / cover;
+}
 .ruyxat {
-  background: rgb(0, 217, 255);
   padding: 120px 0 60px;
   width: 100%;
 }
@@ -195,9 +199,6 @@ onMounted(()=>{
   color: #ffffff;
   font-size: 20px;
   border-radius: 10px;
-}
-.hotel_list {
-    background: rgb(0, 217, 255);
 }
 .hotel_list .lists{
     background: #ffffff;

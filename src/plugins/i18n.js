@@ -9,7 +9,7 @@ const locale = localStorage.getItem("locale") || "ru";
 const i18n = createI18n({
     locale,
     legacy: false,
-    fallbackLocale: "ru",
+    fallbackLocale: "uz",
     silentFallbackWarn: true,
     globalInjection: true,
     messages: {

@@ -1,3 +1,108 @@
 {
-  "hi": "Salom en"
+  "h1": "Find Your Flight",
+  "p":"Search and compare best airfares",
+  "placeholder":{
+    "daprture":"Departure city",
+    "arrival": "Arrival city",
+    "date":"Date",
+    "way":"One Way"
+  },
+  "select":{
+    "selected":"Type of Ticket",
+    "econom":"Economy",
+    "children":"Children",
+    "business":"Business"
+  },
+  "buttons":{
+    "home_btn":"Search Tickets"
+  },
+  "section":{
+    "h2":"Your best deal in no time!",
+    "info":{
+      "b":{
+        "first":"24/7 Customer Support",
+        "second":"Сhoice of millions",
+        "third":"Easy booking - saving money",
+        "fourth":"Best Affiliate program",
+        "fifth":"Payment protection",
+        "sixth":"Partners confidence"
+      },
+      "p":{
+        "first": "Professional support 24/7. We are ready to answer questions and provide assistance any time",
+        "second":"More than million tickets sold per year! Our customers always come back.",
+        "third":"Your order can be paid by card without any additional mark-ups",
+        "fourth":"Our customers = our partners. You can buy tickets for yourself, friends, colleagues and save money for next booking! Or even start your own business",
+        "fifth":"Your payment information is securely protected by PCI DSS certificate and compliance of Visa and MasterCard systems standards. Aviakassa is an Accredited IATA Member",
+        "sixth":"A lot or awards from the Uzbekistan and the world's leading airlines"
+      }
+      
+    }
+  },
+  "footer":{
+    "aviakassa":{
+      "first":"About service",
+      "second":"Contacts",
+      "third":"Terms of use",
+      "fourth":"Confidentiality policy"
+      
+    },
+    "service":{
+      "first":"Services",
+      "second":"Flights",
+      "third":"Rail Tickets"
+    }
+   
+  },
+  "charter":{
+    "h2":"Search charters online",
+    "p":"Cheap flights for charter flights",
+    "placeholder":{
+      "label_country":"From Where",
+      "input_country":"Country",
+      "city__input":"City",
+      "type_ticket":"Flight Type",
+      "where_label":"Where",
+      "where_input":"Country",
+      "where_city":"City",
+      "calendar_from":"From Date",
+      "calendar_to":"To Date",
+      "search_p":"Adults",
+      "serach_deti":"Children",
+      "search_mladensi":"Babies",
+      "search_btn":"Search Ticket"
+    }
+  },
+  "aviaticket":{
+    "h2":"Charter flights",
+    "first":"In this section you can find, book and pay for air tickets for charter flights. Charter flights are flights operated according to a separate schedule on airliners chartered by Travel Companies under a charter agreement (more about Charters).",
+    "secod":"A ticket for a charter flight, as a rule, is significantly cheaper than for a regular one, despite the fact that these flights are direct!",
+    "third":"Selecting the country of Departure or Arrival from the list, you will receive a list of cities from which a flight is possible in the direction you are interested in. After choosing a route, the system will show on the calendar all available dates for which tickets can be issued."
+  },
+  "hotel":{
+    "search_city":"City, Country or Hotel",
+    "from":"Check in",
+    "to":"Departure",
+    "p":"Number of people",
+    "btn":"Search Hotel",
+    "label":"Sort by",
+    "option_first":"No Selected",
+    "option_second":"By popularity",
+    "option_third":"Cheap first",
+    "option_fourth":"Expensive first",
+    "secondd_label":"Number of stars",
+    "third_label":"Services and facilities",
+    "parking":"Parking",
+    "free":"Free Internet",
+    "bar":"Bar / Restaurant",
+    "breakfast":"Breakfast",
+    "pool":"Pool",
+    "bathroom":"In-room bathroom",
+    "fitness":"Fitness",
+    "spa":"Spa-Services",
+    "transfer":"Transfer",
+    "search_by_hotel":"Search by hotels"
+
+
+  }
+
 }

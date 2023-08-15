@@ -5,7 +5,7 @@
                 <div class="col-3 logo">
                         <a style="display: flex; align-items: center; text-decoration: none; gap: 10px;" href="/">
                             <img style="width: 50px; height: 50px; border-radius: 50%;" src="../assets/logo.png" alt="logo">
-                            <p style="margin-bottom: 0; text-decoration: none; color:#ffffff">Galaxy- Aviakassa & Aviatour</p>
+                            <p style="margin-bottom: 0; text-decoration: none; color:#ffffff">Galaxy- Tickets & Travels</p>
                         </a>
                 </div>
                 <div class="col-6 language" style="display: flex; justify-content: end;">

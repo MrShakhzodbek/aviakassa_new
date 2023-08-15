@@ -3,22 +3,22 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2>Поиск чартеров онлайн</h2>
-          <p>Дешевые авиабилеты на чартерные рейсы</p>
+          <h2>{{ $t('charter.h2') }}</h2>
+          <p>{{ $t('charter.p') }}</p>
           <form>
             <div class="inputs">
               <div class="country">
                 <div class="country_input">
-                  <label for="">Откуда</label>
-                  <input type="text" placeholder="Country" />
+                  <label for="">{{ $t('charter.placeholder.label_country') }}</label>
+                  <input type="text" :placeholder="$t('charter.placeholder.input_country')" />
                 </div>
                 <div class="country_city">
                   <br />
-                  <input type="text" placeholder="City" />
+                  <input type="text" :placeholder="$('charter.placeholder.city__input')" />
                 </div>
               </div>
               <div class="type">
-                <label for="">Тип Рейса</label>
+                <label for="">{{$t('charter.placeholder.type_ticket')}}</label>
                 <a href="">
                   <button><i class="fa-solid fa-plane-up"></i></button>
                   <button><i class="fa-solid fa-plane-arrival"></i></button>
@@ -26,29 +26,29 @@
               </div>
               <div class="where">
                 <div class="where_input">
-                  <label for="">Куда</label>
-                  <input type="text" placeholder="Country" />
+                  <label for="">{{ $t('charter.placeholder.where_label') }}</label>
+                  <input type="text" :placeholder="$('charter.placeholder.where_input')" />
                 </div>
                 <div class="where_city">
                   <br />
-                  <input type="text" placeholder="City" />
+                  <input type="text" :placeholder="$('charter.placeholder.where_city')" />
                 </div>
               </div>
             </div>
             <div class="calendar">
               <div class="from_date">
-                <label for="">From Date</label> <br>
+                <label for="">{{ $t('charter.placeholder.calendar_from') }}</label> <br>
                 <input type="date">
               </div>
               <div class="to_date">
-                <label for="">To Date</label> <br>
+                <label for="">{{ $T('charter.placeholder.calendar_to') }}</label> <br>
                 <input type="date">
               </div>
             </div>
             <div class="search">
               <div class="box">
                 <div class="vzrosliye">
-                  <p>Взрослые</p>
+                  <p>{{ $t('charter.placeholder.search_p') }}</p>
                   <div class="click">
                     <button @click="amal(-1)">-</button>
                     {{ count }}
@@ -56,7 +56,7 @@
                   </div>
                 </div>
                 <div class="deti">
-                  <p>Дети</p>
+                  <p>{{ $t('charter.placeholder.serach_deti') }}</p>
                   <div class="click">
                     <button @click="deti(-1)">-</button>
                     {{ raqam }}
@@ -64,7 +64,7 @@
                   </div>
                 </div>
                 <div class="mladensi">
-                  <p>Младенцы</p>
+                  <p>{{ $t('charter.placeholder.search_mladensi') }}</p>
                   <div class="click">
                     <button @click="mladensi(-1)">-</button>
                     {{ son }}
@@ -72,7 +72,7 @@
                   </div>
                 </div>
               </div>
-              <div class="button">Search Ticket</div>
+              <div class="button">{{ $t('charter.placeholder.search_btn') }}</div>
             </div>
           </form>
           <div class="result">
@@ -132,19 +132,20 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="aviaticket">
+    <div class="avia_bilet">
     <div class="container">
      <div class="row">
-      <h2>Чартерные авиабилеты</h2>
-      <p>В данном разделе Вы сможете найти, забронировать и оплатить авиабилеты на чартерные рейсы. Чартерные - это рейсы, выполняемые по отдельному расписанию на авиалайнерах, зафрахтованных Туркомпаниями по чартерному договору (подробнее о Чартерах).</p>
-      <p>Билет на чартерный рейс, как правило, существенно дешевле, чем на регулярный, при том, что эти рейсы - прямые!</p>
-      <p>Выбирая из списка страну Вылета или Прилета, вы получите список городов, из которых возможен перелет в интересующем вас направлении. После выбора маршрута система покажет на календаре все доступные даты, на которые возможно оформление билетов.</p>
+      <h2>{{ $t('aviaticket.h2') }}</h2>
+      <p>{{ $t('aviaticket.first') }}</p>
+      <p>{{ $t('aviaticket.secod') }}</p>
+      <p>{{ $t('aviaticket.third') }}</p>
      </div>
     </div>
 
   </div>
+  </div>
+
+  
 </template>
 
 <script>
@@ -154,14 +155,6 @@ export default {
       count: 0,
       raqam: 0,
       son:0,
-      selectedDate: [
-        new Date(),
-        new Date(new Date().getTime() + 9 * 24 * 60 * 60 * 1000),
-      ],
-      disabledEndDate: {
-        to: new Date("01.02.2021"),
-        from: new Date("10.02.2021"),
-      },
     };
   },
   methods: {
@@ -183,7 +176,7 @@ export default {
 
 <style scoped>
 .charter {
-  background: rgb(49, 217, 243);
+  background: url('https://images.pexels.com/photos/163771/airport-airplanes-gates-flight-line-163771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center / cover;
 }
 h2,
 p {

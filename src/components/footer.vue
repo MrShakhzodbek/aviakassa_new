@@ -6,11 +6,11 @@
                     <ul>
                         <li>Aviakassa.com</li>
                         <li>
-                            <a href="">About service</a>
+                            <a href="">{{ $t('footer.aviakassa.first') }}</a>
                         </li>
-                        <li><a href="">Contacts</a></li>
-                        <li><a href="">Terms of use</a></li>
-                        <li><a href="">Confidentiality policy</a></li>
+                        <li><a href="">{{ $t('footer.aviakassa.second') }}</a></li>
+                        <li><a href="">{{ $t('footer.aviakassa.third') }}</a></li>
+                        <li><a href="">{{ $t('footer.aviakassa.fourth') }}</a></li>
                     </ul>
                     <div class="logos">
                         <i class="fa-brands fa-telegram"></i>
@@ -20,9 +20,9 @@
                 </div>
                 <div class="col-2 services">
                         <ul>
-                            <li>Services</li>
-                            <li><a href="">Flights</a></li>
-                            <li><a href="">Rail Tickets </a></li>
+                            <li>{{ $t('footer.service.first') }}</li>
+                            <li><a href="">{{ $t('footer.service.second') }}</a></li>
+                            <li><a href="">{{ $t('footer.service.third') }} </a></li>
                         </ul>
                 </div>
                 <div class="col-2 apps">
@@ -100,7 +100,6 @@ footer{
 hr{
     color: white;
     margin-top: 50px;
-    margin-bottom: ;
 }
 .apps ul{
     display: flex;

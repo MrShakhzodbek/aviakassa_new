@@ -3,44 +3,41 @@
     <div class="container">
       <div class="row">
         <div class="col-12 main">
-          <h1>Find Your Flight</h1>
-            <pre>{{$t('hi')}}</pre>
-          <p>Search and compare best airfares</p>
+          <h1>{{ $t('h1') }}</h1>
+          <p>{{ $t('p') }}</p>
           <form>
-            <input type="text" name="" id="" placeholder="Departure city" />
+            <input type="text" name="" id="" :placeholder="$t('placeholder.daprture')" />
             <i class="fa-solid fa-right-left"></i>
-            <input type="text" name="" id="" placeholder="Arrival city" />
+            <input type="text" name="" id="" :placeholder="$t('placeholder.arrival') " />
             <input
               type="date"
-              placeholder="Date"
+              :placeholder="$t('placeholder.date')"
               onfocus="this.type ='date'"
               onblur="this.type = 'text'"
             />
             <input
               type="date"
-              placeholder="One Way"
+              :placeholder="$t('placeholder.way')"
               onfocus="this.type ='date'"
               onblur="this.type = 'text'"
             />
             <select>
-              <option selected>Type of Ticket</option>
-              <option value="economy">Economy</option>
-              <option value="children">Children</option>
-              <option value="business">Business</option>
-              <option value="childrens">Childrens</option>
+              <option selected>{{ $t('select.selected') }}</option>
+              <option value="economy">{{ $t('select.econom') }}</option>
+              <option value="children">{{ $t('select.children') }}</option>
+              <option value="business">{{$t('select.business')}}</option>
             </select>
           </form>
-          <button>Search Tickets</button>
+          <button>{{ $t('buttons.home_btn') }}</button>
         </div>
       </div>
     </div>
-  </header>
-  <main style="padding-top: 50px; width: 100%; padding-bottom: 50px;">
+    <section style="padding-top: 50px; width: 100%; padding-bottom: 50px">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <h2 style="text-align: center; margin-bottom: 30px">
-            Your best deal in no time!
+            {{ $t('section.h2') }}
           </h2>
           <div class="boxes">
             <div class="first">
@@ -50,11 +47,9 @@
               >
                 <img src="../assets/photo_2023-08-11_22-32-34.jpg" alt="" />
                 <div class="info">
-                  <b>24/7 Customer Support</b>
+                  <b>{{ $t('section.info.b.first') }}</b>
                   <p>
-                    Professional support 24/7. We are ready to answer questions
-                    <br />
-                    and provide assistance any time
+                    {{ $t('section.info.p.first') }}
                   </p>
                 </div>
               </div>
@@ -64,11 +59,9 @@
               >
                 <img src="../assets/photo_2023-08-11_22-32-57.jpg" alt="" />
                 <div class="info">
-                  <b>Сhoice of millions</b>
+                  <b>{{ $t('section.info.b.second') }}</b>
                   <p>
-                    More than million tickets sold per year! Our customers
-                    always <br />
-                    come back.
+                   {{ $t('section.info.p.second') }}
                   </p>
                 </div>
               </div>
@@ -78,10 +71,9 @@
               >
                 <img src="../assets/photo_2023-08-11_22-33-05.jpg" alt="" />
                 <div class="info">
-                  <b>Easy booking - saving money</b>
+                  <b>{{ $t('section.info.b.third') }}</b>
                   <p>
-                    Your order can be paid by card without any additional <br />
-                    mark-ups
+                    {{ $t('section.info.p.third') }}
                   </p>
                 </div>
               </div>
@@ -90,9 +82,9 @@
               <div class="box" >
                 <img src="../assets/photo_2023-08-11_22-32-50.jpg" alt="" />
                 <div class="info">
-                  <b>Best Affiliate program</b>
+                  <b>{{ $t('section.info.b.fourth') }}</b>
                   <p>
-                    Our customers = our partners. You can buy tickets for yourself, friends, colleagues and save money for next booking! Or even start your own business
+                    {{ $t('section.info.p.fourth') }}
                   </p>
                 </div>
               </div>
@@ -102,9 +94,9 @@
               >
                 <img src="../assets/photo_2023-08-11_22-33-01.jpg" alt="" />
                 <div class="info">
-                  <b>Payment protection</b>
+                  <b>{{ $t('section.info.b.fifth') }}</b>
                   <p>
-                    Your payment information is securely protected by PCI DSS certificate and compliance of Visa and MasterCard systems standards. Aviakassa is an Accredited IATA Member
+                    {{ $t('section.info.p.fourth') }}
                   </p>
                 </div>
               </div>
@@ -114,9 +106,9 @@
               >
                 <img src="../assets/photo_2023-08-11_22-33-09.jpg" alt="" />
                 <div class="info">
-                  <b>Partners confidence</b>
+                  <b>{{ $t('section.info.b.sixth') }}</b>
                   <p>
-                    A lot or awards from the Russian and the world's leading airlines
+                    {{ $t('section.info.p.sixth') }}
                   </p>
                 </div>
               </div>
@@ -125,7 +117,9 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
+  </header>
+  
 </template>
 
 <script setup>
@@ -144,7 +138,7 @@ onMounted(()=>{
 
 <style  scoped>
 header {
-  background: rgb(49, 217, 243);
+  background: url('https://cdn.pixabay.com/photo/2017/03/03/17/11/aircraft-2114464_1280.jpg') no-repeat center center / cover;
   padding: 50px 0 30px;
 }
 header form {
@@ -198,18 +192,24 @@ header .main form select {
 .boxes{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
-main .boxes .first, main .boxes .second{
+section{
+  background: rgba(248, 246, 246, 0.716);
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+section .boxes .first, section .boxes .second{
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
-main .boxes .first .box, main .boxes .second .box{
+section .boxes .first .box, section .boxes .second .box{
     display: flex;
     align-items: center;
     gap: 30px;
 }
-main .boxes .first .box img, main .boxes .second .box img{
+section .boxes .first .box img, section .boxes .second .box img{
     width: 100px;
     height: 100px;
     border-radius: 50%;

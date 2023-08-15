@@ -1,3 +1,108 @@
 {
-  "hi": "Salom"
+  "h1": "Parvozingizni toping",
+  "p":"Eng yaxshi aviachiptalarni qidiring va solishtiring",
+  "placeholder":{
+    "daprture":"Chiqish shahri",
+    "arrival": "Kelish shahri",
+    "date":"Sana",
+    "way":"Bir tomonga"
+  },
+  "select":{
+    "selected":"Chipta turi",
+    "econom":"Ekonom",
+    "children":"Bola",
+    "business":"Biznes"
+  },
+  "buttons":{
+    "home_btn":"Chiptalarni qidirish"
+  },
+  "section":{
+    "h2":"Qisqa vaqt ichida eng yaxshi kelishuvingiz!",
+    "info":{
+      "b":{
+        "first":"24/7 mijozlarni qo‘llab-quvvatlash",
+        "second":"Millionlarning tanlovi",
+        "third":"Oson bron qilish - pulni tejash",
+        "fourth":"Eng yaxshi hamkorlik dasturi",
+        "fifth":"To'lovni himoya qilish",
+        "sixth":"Hamkorlarning ishonchi"
+      },
+      "p":{
+        "first":"Professional yordam 24/7. Biz savollarga javob berishga va istalgan vaqtda yordam berishga tayyormiz",
+        "second":"Yiliga milliondan ortiq chiptalar sotiladi! Bizning mijozlarimiz doimo qaytib kelishadi.",
+        "third":"Buyurtmani karta orqali hech qanday qo'shimchasiz to'lash mumkin belgilar",
+        "fourth":"Bizning mijozlarimiz = bizning hamkorlarimiz. Siz o'zingiz, do'stlaringiz, hamkasblaringiz uchun chipta sotib olishingiz va keyingi bron qilish uchun pul tejashingiz mumkin! Yoki hatto o'z biznesingizni boshlang",
+        "fifth":"Sizning to'lov ma'lumotlaringiz PCI DSS sertifikati va Visa va MasterCard tizimlari standartlariga muvofiqligi bilan xavfsiz himoyalangan. Aviakassa IATA akkreditatsiyadan o'tgan a'zosi",
+        "sixth":"Uzbekistan va dunyoning etakchi aviakompaniyalaridan ko'p yoki mukofotlar"
+      }
+    }
+  },
+  "footer":{
+    "aviakassa":{
+      "first":"Xizmat haqida",
+      "second":"Kontaktlar",
+      "third":"Foydalanish shartlari",
+      "fourth":"Maxfiylik siyosati"
+      
+    },
+    "service":{
+      "first":" Xizmatlar",
+      "second":"Parvozlar",
+      "third":"Temir yo'l chiptalari"
+    }
+    
+  },
+  "charter":{
+    "h2":"CHARTERLARNI ONLAYNDA QIDIRING",
+    "p":"Charter reyslari uchun arzon reyslar",
+    "placeholder":{
+      "label_country":"Qayerdan",
+      "input_country":"Davlat",
+      "city_input":"Shahar",
+      "type_ticket":"Reys Turi",
+      "where_label":"Qayerdan",
+      "where_input":"Davlat",
+      "where_city":"Shahar",
+      "calendar_from":"Sanadan boshlab",
+      "calendar_to":"Hozirgi kungacha",
+      "search_p":"Kattalar",
+      "serach_deti":"Bolalar",
+      "search_mladensi":"Chaqaloqlar",
+      "search_btn":"Bilet Qidirmoq"
+    }
+    
+  },
+  "aviaticket":{
+    "h2":"Charter reyslari",
+    "first":"Ushbu bo'limda siz charter reyslari uchun aviachiptalarni topishingiz, bron qilishingiz va to'lashingiz mumkin. Charter reyslari - bu charter shartnomasi bo'yicha Sayohat kompaniyalari tomonidan ijaraga olingan avialaynerlarda alohida jadval bo'yicha amalga oshiriladigan reyslar (Charter haqida batafsil).",
+    "secod":"Charter reyslari uchun chipta, qoida tariqasida, bu reyslar to'g'ridan-to'g'ri bo'lishiga qaramay, oddiy samolyotga qaraganda ancha arzon!",
+    "third":"Ro'yxatdan jo'nash yoki kelish mamlakatini tanlab, siz o'zingizni qiziqtirgan yo'nalish bo'yicha parvoz qilish mumkin bo'lgan shaharlar ro'yxatini olasiz. Marshrutni tanlagandan so'ng, tizim taqvimda chiptalar berilishi mumkin bo'lgan barcha mavjud sanalarni ko'rsatadi."
+  },
+  "hotel":{
+    "search_city":"Shahar, mamlakat yoki mehmonxona",
+    "from":"Kelish",
+    "to":"Ketish",
+    "p":"Odamlar soni",
+    "btn":"Mehmonxona qidirish",
+    "label":"Saralash turi",
+    "option_first":"Tanlanmagan",
+    "option_second":"Mashhurlik bo'yicha",
+    "option_third":"Avval arzon",
+    "option_fourth":"Avval qimmat",
+    "secondd_label":"Yulduzlar soni",
+    "third_label":"Xizmatlar va ob'ektlar",
+    "parking":"Avtoturargoh",
+    "free":"Bepul internet",
+    "bar":"Bar / Restoran",
+    "breakfast":"Nonushta",
+    "pool":"Hovuz",
+    "bathroom":"Xonadagi hammom",
+    "fitness":"Fitnes",
+    "spa":"Spa-xizmatlar",
+    "transfer":"Transfer",
+    "search_by_hotel":"Mehmonxonalar bo'yicha qidirish"
+
+
+  }
+
 }
